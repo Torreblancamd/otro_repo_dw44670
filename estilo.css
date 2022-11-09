@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+
+
+ul{
+    display:flex;  
+    background-color: black;
+    list-style-type: none;
+}
+
+li{
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#grilla{
+    display:grid;
+}
+
+
+footer{
+    background-color: black;
+ 
+}
+
+
+footer p{
+    color:white;    
+    text-align: center;
+}
+
+
+@media only screen and ( max-width:600px){
+
+    
+    header{
+        height: 400px;
+    }
+
+
+    ul{
+        height: 250px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    li{
+        font-size:20px;
+    }
+
+
+
+    #grilla{
+
+        height: 1600px;
+        grid-template-columns: 90% ;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        grid-template-areas:"foto1"
+                            "foto2"
+                            "foto3"
+                            "foto4"
+                            "foto5"
+                            "foto6";
+
+        align-content: space-around;
+        justify-content: center;
+    }
+
+
+    footer p{
+        color:white;
+        font-size:16px;
+        text-align: center;
+    }
+  
+}
+
+
+
+
+/*MD*/
+
+@media only screen and (min-width:600px){
+
+    header{
+        height: 500px;
+    }
+
+    ul{
+        flex-direction: row;
+        height: 100px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    li{
+        font-size:21px;
+    }
+
+    #grilla{
+
+        height: 1600px;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 400px 400px 400px;
+        grid-template-areas: "foto1 foto2"
+                             "foto3 foto4"
+                            "foto5 foto6";
+
+
+        justify-content: space-evenly;
+        align-content: space-around;
+    }
+
+
+    footer{
+        height: 60px;
+    }
+}
+
+
+@media only screen and (min-width:992px){
+
+
+    #grilla{
+        height: 1600px;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 400px 400px 400px ;
+        grid-template-areas: "foto1 foto1 foto1"
+                             "foto2 foto3 foto4"
+                             "foto5 .   foto6";
+    }
+
+
+    #img_uno{
+        grid-area:foto1;
+    }
+
+    #img_dos{
+        grid-area:foto5;
+    }
+
+    #img_tres{
+        grid-area:foto6;
+    }
+}
